@@ -13,7 +13,7 @@ clear:
 	rm -rf target && clj -A:build
 
 jar:
-	clj -A:build
+	clojure -A:build
 
 build: cp target/igpop-0.0.1-standalone.jar npm/igpop/bin/igpop.jar
 
