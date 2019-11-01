@@ -15,7 +15,7 @@ clear:
 jar:
 	clojure -A:build
 
-build: cp target/igpop-0.0.1-standalone.jar npm/igpop/bin/igpop.jar
+build:  mv target/igpop-0.0.1-standalone.jar npm/igpop/bin/igpop.jar
 
 test:
 	clojure -A:test:runner
