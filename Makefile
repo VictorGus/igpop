@@ -7,10 +7,10 @@ VERSION = $(shell cat VERSION)
 DATE = $(shell date)
 
 repl:
-	clj -A:test:nrepl -R:test:nrepl -e "(-main)" -r
+	clojure -A:test:nrepl -R:test:nrepl -e "(-main)" -r
 
 clear:
-	rm -rf target && clj -A:build
+	rm -rf target && clojure -A:build
 
 jar:
 	clojure -A:build
@@ -18,4 +18,4 @@ jar:
 build: cp target/igpop-0.0.1-standalone.jar npm/igpop/bin/igpop.jar
 
 test:
-	clj -A:test:runner
+	clojure -A:test:runner
